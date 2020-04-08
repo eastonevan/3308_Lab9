@@ -172,25 +172,29 @@
         var days_of_week= ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday','Friday','Saturday'];
         var currTime = new Date();
         var dow= currTime.getDay();
-        var day_1=getKey(dow+1);
-        var day_2=getKey(dow+2);
-        var day_3=getKey(dow+3);
-        var day_4=getKey(dow+4);
-        var day_5=getKey(dow+5);
-        dow++
+        //var day_2=getKey(dow+2);
+        //var day_3=getKey(dow+3);
+        //var day_4=getKey(dow+4);
+        //var day_5=getKey(dow+5);
+        dow++;
         if(dow>6){dow=0;}
+        var day_1=getKey(dow);
         document.getElementById('5_day_forecast').innerHTML= '<div style="width: 20%;"><div class="card"><div class="card-body"><h5 class="card-title">'+days_of_week[dow]+'</h5><p class="card-text">High:'+getFarenheitTemp(day_1.maxtemp)+'<br>Low:'+getFarenheitTemp(day_1.mintemp)+'<br>Sunrise: '+day_1.astro.sunrise+'<br>Sunset: '+day_1.astro.sunset+'</p></div></div></div>';
-        dow++
+        dow++;
         if(dow>6){dow=0;}
+        var day_2=getKey(dow);
         document.getElementById('5_day_forecast').innerHTML += '<div style="width: 20%;"><div class="card"><div class="card-body"><h5 class="card-title">'+days_of_week[dow]+'</h5><p class="card-text">High:'+getFarenheitTemp(day_2.maxtemp)+'<br>Low:'+getFarenheitTemp(day_2.mintemp)+'<br>Sunrise: '+day_2.astro.sunrise+'<br>Sunset: '+day_2.astro.sunset+'</p></div></div></div>';
-        dow++
+        dow++;
         if(dow>6){dow=0;}
+        var day_3=getKey(dow);
         document.getElementById('5_day_forecast').innerHTML += '<div style="width: 20%;"><div class="card"><div class="card-body"><h5 class="card-title">'+days_of_week[dow]+'</h5><p class="card-text">High:'+getFarenheitTemp(day_3.maxtemp)+'<br>Low:'+getFarenheitTemp(day_3.mintemp)+'<br>Sunrise: '+day_3.astro.sunrise+'<br>Sunset: '+day_3.astro.sunset+'</p></div></div></div>';
-        dow++
+        dow++;
         if(dow>6){dow=0;}
+        var day_4=getKey(dow);
         document.getElementById('5_day_forecast').innerHTML += '<div style="width: 20%;"><div class="card"><div class="card-body"><h5 class="card-title">'+days_of_week[dow]+'</h5><p class="card-text">High:'+getFarenheitTemp(day_4.maxtemp)+'<br>Low:'+getFarenheitTemp(day_4.mintemp)+'<br>Sunrise: '+day_4.astro.sunrise+'<br>Sunset: '+day_4.astro.sunset+'</p></div></div></div>';
-        dow++
+        dow++;
         if(dow>6){dow=0;}
+        var day_5=getKey(dow);
         document.getElementById('5_day_forecast').innerHTML += '<div style="width: 20%;"><div class="card"><div class="card-body"><h5 class="card-title">'+days_of_week[dow]+'</h5><p class="card-text">High:'+getFarenheitTemp(day_5.maxtemp)+'<br>Low:'+getFarenheitTemp(day_5.mintemp)+'<br>Sunrise: '+day_5.astro.sunrise+'<br>Sunset: '+day_5.astro.sunset+'</p></div></div></div>';
 			})
 		})
